@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenwood Academy - Excellence in Education</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="loading-screen">
+            <div class="loader">
+                <div class="school-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="loading-text">Welcome to Greenwood Academy</div>
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Header Bar -->
+        <div class="top-header">
+            <div class="header-container">
+                <div class="header-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Maitighar, Kathmandu Nepal</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>01-5344636, 01-5321365, 01-5344636</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>ktm@sxc.edu.np</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <div class="brand-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">Greenwood Academy</span>
+                        <span class="brand-tagline">Excellence in Education</span>
+                    </div>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#home" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#about" class="nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="#achievements" class="nav-link">
+                        <i class="fas fa-trophy"></i>
+                        <span>Achievements</span>
+                    </a>
+                    <a href="#academics" class="nav-link">
+                        <i class="fas fa-book"></i>
+                        <span>Academics</span>
+                    </a>
+                    <a href="#events" class="nav-link">
+                        <i class="fas fa-calendar"></i>
+                        <span>Events</span>
+                    </a>
+                    <a href="#gallery" class="nav-link">
+                        <i class="fas fa-images"></i>
+                        <span>Gallery</span>
+                    </a>
+                    <a href="#contact" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+                <div class="nav-controls">
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="nav-toggle" id="nav-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home Section -->
+            <section id="home" class="section hero-section">
+                <div class="hero-background">
+                    <div class="hero-overlay"></div>
+                    <img src="https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Greenwood Academy Campus" class="hero-image">
+                </div>
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="hero-text">
+                            <h1 class="hero-title">
+                                <span class="title-line">Welcome to</span>
+                                <span class="title-highlight">Greenwood Academy</span>
+                                <span class="title-subtitle">Where Dreams Take Flight</span>
+                            </h1>
+                            <p class="hero-description">
+                                Empowering minds, nurturing talents, and building tomorrow's leaders through innovative education and holistic development.
+                            </p>
+                            <div class="hero-actions">
+                                <button class="btn btn-primary" onclick="scrollToSection('about')">
+                                    <span>Explore Our Campus</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                                <button class="btn btn-secondary virtual-tour-btn" onmouseenter="showVirtualTourVideo()" onmouseleave="hideVirtualTourVideo()">
+                                    <span>Virtual Tour</span>
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                            <div class="hero-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number" data-target="2500">0</div>
+                                    <div class="stat-label">Students</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number" data-target="150">0</div>
+                                    <div class="stat-label">Faculty</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number" data-target="38">0</div>
+                                    <div class="stat-label">Years Legacy</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number" data-target="95">0</div>
+                                    <div class="stat-label">Success Rate</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Virtual Tour Video -->
+                <div class="virtual-tour-video" id="virtual-tour-video">
+                    <video autoplay muted loop>
+                        <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay">
+                        <h3>Virtual Campus Tour</h3>
+                        <p>Experience our beautiful campus from anywhere</p>
+                    </div>
+                </div>
+
+                <!-- Floating Notice Board -->
+                <div class="floating-notice" id="floating-notice">
+                    <div class="notice-header">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Latest Updates</span>
+                    </div>
+                    <div class="notice-content" id="notice-content">
+                        <div class="notice-item active">
+                            <h4>Annual Sports Day 2025</h4>
+                            <p>Join us for an exciting day of sports and competition on December 15th!</p>
+                        </div>
+                    </div>
+                    <div class="notice-controls">
+                        <button class="notice-btn prev" onclick="changeNotice(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="notice-btn next" onclick="changeNotice(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section about-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">About Us</span>
+                        <h2 class="section-title">Building Tomorrow's Leaders</h2>
+                        <p class="section-subtitle">
+                            Since 1985, Greenwood Academy has been at the forefront of educational excellence, 
+                            nurturing young minds and preparing them for a bright future.
+                        </p>
+                    </div>
+                    
+                    <div class="about-grid">
+                        <!-- Principal's Message -->
+                        <div class="principal-message">
+                            <div class="principal-card">
+                                <div class="principal-image">
+                                    <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Principal" />
+                                </div>
+                                <div class="principal-content">
+                                    <h3>Message from Principal</h3>
+                                    <blockquote>
+                                        "At Greenwood Academy, we believe every child is unique and capable of achieving greatness. Our commitment is to provide an environment where students can explore, learn, and grow into confident, compassionate leaders of tomorrow. We foster not just academic excellence, but also character development, critical thinking, and global citizenship. Together, we are building a community of lifelong learners who will make a positive impact on the world."
+                                    </blockquote>
+                                    <div class="principal-signature">
+                                        <strong>Dr. Sarah Mitchell</strong>
+                                        <span>Principal, Greenwood Academy</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-content">
+                            <div class="content-card">
+                                <h3>Our Mission</h3>
+                                <p>To provide world-class education that empowers students to become confident, creative, and compassionate global citizens.</p>
+                            </div>
+                            <div class="content-card">
+                                <h3>Our Vision</h3>
+                                <p>To be the leading educational institution that inspires excellence and innovation in every student we serve.</p>
+                            </div>
+                            <div class="content-card">
+                                <h3>Our Values</h3>
+                                <ul>
+                                    <li>Excellence in Education</li>
+                                    <li>Integrity and Respect</li>
+                                    <li>Innovation and Creativity</li>
+                                    <li>Community and Collaboration</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Interactive Campus Map -->
+                        <div class="campus-tour" id="campus-tour">
+                            <h3>Explore Our Campus</h3>
+                            <div class="campus-map">
+                                <div class="map-container">
+                                    <div class="map-point library" data-location="library" style="top: 25%; left: 20%;">
+                                        <div class="point-pulse"></div>
+                                        <div class="point-icon">
+                                            <i class="fas fa-book"></i>
+                                        </div>
+                                        <div class="point-tooltip">Central Library</div>
+                                    </div>
+                                    <div class="map-point lab" data-location="lab" style="top: 35%; left: 60%;">
+                                        <div class="point-pulse"></div>
+                                        <div class="point-icon">
+                                            <i class="fas fa-flask"></i>
+                                        </div>
+                                        <div class="point-tooltip">Science Labs</div>
+                                    </div>
+                                    <div class="map-point auditorium" data-location="auditorium" style="top: 65%; left: 40%;">
+                                        <div class="point-pulse"></div>
+                                        <div class="point-icon">
+                                            <i class="fas fa-theater-masks"></i>
+                                        </div>
+                                        <div class="point-tooltip">Main Auditorium</div>
+                                    </div>
+                                    <div class="map-point sports" data-location="sports" style="top: 75%; left: 75%;">
+                                        <div class="point-pulse"></div>
+                                        <div class="point-icon">
+                                            <i class="fas fa-running"></i>
+                                        </div>
+                                        <div class="point-tooltip">Sports Complex</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section id="achievements" class="section achievements-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Our Pride</span>
+                        <h2 class="section-title">Achievements & Recognition</h2>
+                        <p class="section-subtitle">
+                            Celebrating excellence in academics, sports, and extracurricular activities
+                        </p>
+                    </div>
+                    
+                    <div class="achievements-grid" id="achievements-grid">
+                        <!-- Achievements will be populated by JavaScript -->
+                    </div>
+                    
+                    <!-- Awards Showcase -->
+                    <div class="awards-showcase">
+                        <h3>Recent Awards & Recognition</h3>
+                        <div class="awards-grid">
+                            <div class="award-card">
+                                <div class="award-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h4>State Basketball Champions</h4>
+                                <p>Our varsity team won the state championship for the third consecutive year</p>
+                                <span class="award-year">2024</span>
+                            </div>
+                            <div class="award-card">
+                                <div class="award-icon">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <h4>Science Olympiad Gold</h4>
+                                <p>Students secured first place in the national science olympiad competition</p>
+                                <span class="award-year">2024</span>
+                            </div>
+                            <div class="award-card">
+                                <div class="award-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>Excellence in STEM Education</h4>
+                                <p>Recognized by the Department of Education for outstanding STEM programs</p>
+                                <span class="award-year">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Academics Section -->
+            <section id="academics" class="section academics-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Academics</span>
+                        <h2 class="section-title">Excellence in Learning</h2>
+                        <p class="section-subtitle">
+                            Comprehensive programs designed to nurture intellectual growth and personal development
+                        </p>
+                    </div>
+                    
+                    <div class="academics-grid">
+                        <div class="program-card elementary">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <i class="fas fa-child"></i>
+                                </div>
+                                <h3>Elementary Level</h3>
+                                <span class="grade-range">Nursery - Grade 5</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Building strong foundations through interactive learning and creative exploration in our early years program.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card secondary">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                                <h3>Secondary Level</h3>
+                                <span class="grade-range">Grade 6 - 10</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Developing critical thinking and preparing students for advanced academic challenges with comprehensive curriculum.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card high-school">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h3>High School Level</h3>
+                                <span class="grade-range">Grade 11 & 12</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Specialized tracks for college preparation and career readiness:</p>
+                                <div class="program-options">
+                                    <span class="option-tag">Science</span>
+                                    <span class="option-tag">Management</span>
+                                    <span class="option-tag">Arts</span>
+                                    <span class="option-tag">A Levels</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Events Section -->
+            <section id="events" class="section events-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">What's Happening</span>
+                        <h2 class="section-title">Upcoming Events</h2>
+                        <p class="section-subtitle">
+                            Stay connected with our vibrant school community
+                        </p>
+                    </div>
+                    
+                    <!-- Event Countdown -->
+                    <div class="event-countdown" id="event-countdown">
+                        <div class="countdown-header">
+                            <h3>Next Event: Annual Sports Day</h3>
+                            <p>December 15, 2024 at 9:00 AM</p>
+                        </div>
+                        <div class="countdown-timer">
+                            <div class="timer-unit">
+                                <div class="timer-number" id="days">00</div>
+                                <div class="timer-label">Days</div>
+                            </div>
+                            <div class="timer-separator">:</div>
+                            <div class="timer-unit">
+                                <div class="timer-number" id="hours">00</div>
+                                <div class="timer-label">Hours</div>
+                            </div>
+                            <div class="timer-separator">:</div>
+                            <div class="timer-unit">
+                                <div class="timer-number" id="minutes">00</div>
+                                <div class="timer-label">Minutes</div>
+                            </div>
+                            <div class="timer-separator">:</div>
+                            <div class="timer-unit">
+                                <div class="timer-number" id="seconds">00</div>
+                                <div class="timer-label">Seconds</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Events Grid -->
+                    <div class="events-grid" id="events-grid">
+                        <!-- Events will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section id="gallery" class="section gallery-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Memories</span>
+                        <h2 class="section-title">School Gallery</h2>
+                        <p class="section-subtitle">
+                            Capturing moments of learning, growth, and achievement
+                        </p>
+                    </div>
+                    
+                    <!-- Gallery Filters -->
+                    <div class="gallery-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="academics">Academics</button>
+                        <button class="filter-btn" data-filter="sports">Sports</button>
+                        <button class="filter-btn" data-filter="events">Events</button>
+                        <button class="filter-btn" data-filter="achievements">Achievements</button>
+                    </div>
+                    
+                    <!-- Gallery Grid -->
+                    <div class="gallery-grid" id="gallery-grid">
+                        <!-- Gallery items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section contact-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Get in Touch</span>
+                        <h2 class="section-title">Contact Us</h2>
+                        <p class="section-subtitle">
+                            We're here to answer your questions and help you join our community
+                        </p>
+                    </div>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Visit Us</h4>
+                                    <p>123 Education Boulevard<br>Knowledge City, KC 12345</p>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Call Us</h4>
+                                    <p>+1 (555) 123-4567<br>Mon-Fri: 8:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Email Us</h4>
+                                    <p>info@greenwoodacademy.edu<br>admissions@greenwoodacademy.edu</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form-container">
+                            <form class="contact-form" id="contact-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                                </div>
+                                <div class="form-group">
+                                    <select id="subject" name="subject" required>
+                                        <option value="">Select Subject</option>
+                                        <option value="admissions">Admissions Inquiry</option>
+                                        <option value="academics">Academic Information</option>
+                                        <option value="events">Events & Activities</option>
+                                        <option value="general">General Question</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <span>Send Message</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section brand-section">
+                        <div class="footer-brand">
+                            <div class="brand-logo">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="brand-text">
+                                <span class="brand-name">Greenwood Academy</span>
+                                <span class="brand-tagline">Excellence in Education Since 1985</span>
+                            </div>
+                        </div>
+                        <p>Empowering minds, nurturing talents, and building tomorrow's leaders through innovative education.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#achievements">Achievements</a></li>
+                            <li><a href="#academics">Academics</a></li>
+                            <li><a href="#events">Events</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Academics</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Elementary Level</a></li>
+                            <li><a href="#">Secondary Level</a></li>
+                            <li><a href="#">High School Level</a></li>
+                            <li><a href="#">Summer Programs</a></li>
+                            <li><a href="#">Online Learning</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Contact Info</h4>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Education Boulevard, Knowledge City</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@greenwoodacademy.edu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <p>&copy; 2025 Greenwood Academy. All rights reserved.</p>
+                        <div class="footer-bottom-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Service</a>
+                            <a href="#">Accessibility</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modals -->
+        <div class="modal" id="location-modal">
+            <div class="modal-overlay" onclick="closeModal()"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modal-title">Location Details</h3>
+                    <button class="modal-close" onclick="closeModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Modal content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="gallery-modal">
+            <div class="modal-overlay" onclick="closeGalleryModal()"></div>
+            <div class="modal-content gallery-modal-content">
+                <div class="modal-header">
+                    <h3 id="gallery-modal-title">Gallery Item</h3>
+                    <button class="modal-close" onclick="closeGalleryModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body" id="gallery-modal-body">
+                    <!-- Gallery modal content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
